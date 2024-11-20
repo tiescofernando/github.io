@@ -1,0 +1,101 @@
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(137deg, rgba(226, 71, 179, 0.94) 15%, rgba(173, 87, 13, 1) 35%, rgba(197, 46, 65, 1) 100%);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Para garantir que o texto seja legível sobre o fundo escuro */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo da barra de navegação */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens da lista em linha */
+    margin: 0 150px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+.image-text {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    margin: 10px 0; /* Espaçamento entre os conjuntos de imagem e texto */
+}
+
+.image-text.left {
+    flex-direction: row;/*Texto à direita, imagem à esquerda*/
+}
+
+.image-text.right {
+    flex-direction: row-reverse; /* Texto à esquerda, imagem à direita */
+}
+
+.image-text img {
+    width: 250px; /* Tamanho fixo para as imagens */
+    height: 250px; /* Tamanho fixo para as imagens */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin: 4px; /* Espaçamento entre a imagem e o texto */
+}
+
+.image-text img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+}
+
+.image-text figcaption {
+    opacity: 0.8; /* Opacidade inicial do texto */
+    transition: opacity 0.9s ease; /* Transição suave para a opacidade */
+    position: relative;
+    font-size: 35px; /* Aumenta o tamanho da fonte */
+    margin-left: 25px; /* Espaçamento entre a imagem e o texto */
+    
+}
+
+.image-text img:hover + figcaption {
+    opacity: 15; /* Aumenta a opacidade do texto ao passar o mouse na imagem */
+}
+
+.interview {
+  border: 2px solid #eead2d;
+  border-radius: 15px;
+  padding: 3px;
+  margin: 20px;
+  box-shadow: 0 3px rgba(0, 0, 0, 1);
+}
+
+#f1, #f2, #f3, #f4 {
+    font-size: 25px;
+    font-family: monospace, cursive;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+ #f5 {
+    font-size: 42px;
+    font-family: monospace, cursive;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+
+
+
+
+

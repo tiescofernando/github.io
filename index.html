@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <title>Diga Não a Violencia Contra as Mulheres</title>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#entrevista">Entrevista</a></li>
+            <li><a href="#comentarios">Comentarios</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de Conteúdo -->
+    <div class="content">
+        <div class="image-text left">
+            <figure>
+                <img id="iperna" src="https://i.ibb.co/L60kc0M/perna.jpg" alt="Imagem de uma perna machucada">
+                <figcaption id="f1">"Ah, ele estava bêbado, não<br> foi nada demais."</figcaption>
+            </figure>
+        </div>
+
+        <div class="image-text right">
+            <figure>
+                <img id="ibco" src="https://i.ibb.co/gP3v2tH/brco.jpg" alt="Imagem de um braço machucado">
+                <figcaption id="f2">Ele só se alterou um pouco, não se <br>preocupe, ele não é assim."</figcaption>
+            </figure>
+        </div>
+
+        <div class="image-text left">
+            <figure>
+                <img id="iolho" src="https://i.ibb.co/jZ3DV99/olho-roxo.jpg" alt="Imagem de um olho roxo">
+                <figcaption id="f3">"Eu escorreguei e bati o <br>rosto, sou uma desastrada mesmo."</figcaption>
+            </figure>
+        </div>
+
+        <div class="image-text right">
+            <figure>
+                <img id="sil" src="https://i.ibb.co/WWBdVfB/silencio1.jpg" alt="Imagem de silêncio">
+                <figcaption id="f4">Não fala nada pra ninguém, por favor. <br>Ele vai mudar.</figcaption>
+            </figure>
+        </div>
+
+        <div class="image-text left">
+            <figure>
+                <img id="vil" src="https://i.ibb.co/HdBjLfk/violence-against-women-4209778-1920.jpg" alt="Imagem de violência">
+                <figcaption id="f5">Está na hora de dar um basta.</figcaption>
+            </figure>
+        </div>
+    </div>
+    
+    <!--Seção da Entrevista-->
+    <div class="interview">
+      <section id="entrevista"></section>
+      <h1 class="introducao">"Infelizmente essa é mais uma desculpa, causada pelo medo, que muitas mulheres conta nos dias de hoje, para esconder 
+      as marcas causadas pela violencia domesticas."</h1>
+      <h2 class="Tema">Acompanhe os relatos e depoimentos citados a baixo.</h2>
+      <p class="text">
+        Aqui vai ser posto o texto da entrevista.
+      </p>
+        <!-- Incorporando o áudio da entrevista -->
+        <h4>Ouça a entrevista:</h4>
+        <audio controls>
+            <source src="entrevista.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <!-- Incorporando o vídeo da entrevista -->
+        <h4>Assista uma reportagem transmitida dia 15/11/2024:</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LiMfcLcLjA?si=q5o0ssvhlk86LLSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    
+ <div class="comentarios">
+    <h3>Deixe seu comentário:</h3>
+    <form id="comentarioForm">
+        <textarea id="campoComentario" rows="4" placeholder="Digite seu comentário aqui..." required></textarea>
+        <br>
+        <input type="submit" value="Enviar Comentário">
+    </form>
+</div>
+
+<h3>Comentários:</h3>
+<div class="lista-comentarios" id="listaComentarios"></div>
+
+<script>
+    const comentarioForm = document.getElementById('comentarioForm');
+    const campoComentario = document.getElementById('campoComentario');
+    const listaComentarios = document.getElementById('listaComentarios');
+
+    // Carregar comentários do localStorage ao carregar a página
+    document.addEventListener('DOMContentLoaded', carregarComentarios);
+
+    // Função para carregar comentários do localStorage
+    function carregarComentarios() {
+        const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios.forEach(comentario => {
+            adicionarComentarioNaTela(comentario);
+        });
+    }
+
+    // Função para adicionar um comentário na tela
+    function adicionarComentarioNaTela(comentario) {
+        const divComentario = document.createElement('div');
+        divComentario.className = 'comentario';
+        divComentario.textContent = comentario;
+        listaComentarios.appendChild(divComentario);
+    }
+
+    // Evento de envio do formulário
+    comentarioForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        const comentario = campoComentario.value;
+
+        // Adicionar comentário ao localStorage
+        const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios.push(comentario);
+        localStorage.setItem('comentarios', JSON.stringify(comentarios));
+
+        // Adicionar comentário na tela
+        adicionarComentarioNaTela(comentario);
+
+        // Limpar o campo de texto
+        campoComentario.value = '';
+    });
+    
+</body>
+</html>
