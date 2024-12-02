@@ -2,137 +2,262 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-    <title>Diga Não a Violencia Contra as Mulheres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Respeito Para Elas - Tipos de Violência</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o seu CSS -->
+    
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav>
+
+<!---------------Topo do respeito para elas-------------------->
+  <header class="topo">
+    <div class="site-branding">
+    <a href="https://respeitoparaelas.com">
+      <img src="https://respeitoparaelas.com/wp-content/uploads/2024/11/cropped-lembrete_frase_motivacional_stories_instagram_bege_e_marrom-removebg-preview.png" alt="logo" id="logo"/>
+        <h1 id="txt">Respeito para elas</h1>
+    </a>
+    </div>
+    <nav id="nav-top">
         <ul>
-            <li><a href="#inicio">Bem Vindo</a></li>
-            <li><a href="#entrevista">Entrevista</a></li>
-            <li><a href="#comentarios">Comentarios</a></li>
+            <li><a href="https://respeitoparaelas.com/canais-de-protecao-das-mulheres/">Canais de Proteção das Mulheres</a></li>
+            <li><a href="https://respeitoparaelas.com/depoimentos/">Depoimentos</a></li>
+            <li><a href="https://respeitoparaelas.com/news/">News</a></li>
+            <li><a href="https://respeitoparaelas.com/sobre/">Sobre</a></li>
+            <li><a href="index.html">Tipos de Violência</a></li>
         </ul>
     </nav>
-
-    <!-- Seção de Conteúdo -->
-    <div class="content">
-        <div class="image-text left">
+  </header>
+    <!----------------Final do header----------------->
+    
+    
+    <!-------------Tipos de Violência-------------->
+    <div class="slidesshow-content">
+        <div class="slides active">
             <figure>
-                <img id="iperna" src="https://i.ibb.co/L60kc0M/perna.jpg" alt="Imagem de uma perna machucada">
-                <figcaption id="f1">"Ah, ele estava bêbado, não<br> foi nada demais."</figcaption>
+                <img src="https://i.ibb.co/L60kc0M/perna.jpg" alt="Imagem de uma perna machucada">
+                <figcaption class="text-slides">"Ah, ele estava bêbado, não<br> foi nada demais."</figcaption>
             </figure>
         </div>
 
-        <div class="image-text right">
+        <div class="slides">
             <figure>
-                <img id="ibco" src="https://i.ibb.co/gP3v2tH/brco.jpg" alt="Imagem de um braço machucado">
-                <figcaption id="f2">"Ele só se alterou um pouco, não se <br>preocupe, ele não é assim."</figcaption>
+                <img src="https://i.ibb.co/gP3v2tH/brco.jpg" alt="Imagem de um braço machucado">
+                <figcaption class="text-slides">"Ele só se alterou um pouco, não se <br>preocupe, ele não é assim."</figcaption>
             </figure>
         </div>
 
-        <div class="image-text left">
+        <div class="slides">
             <figure>
-                <img id="iolho" src="https://i.ibb.co/jZ3DV99/olho-roxo.jpg" alt="Imagem de um olho roxo">
-                <figcaption id="f3">"Eu escorreguei e bati o <br>rosto, sou uma desastrada mesmo."</figcaption>
+                <img src="https://i.ibb.co/jZ3DV99/olho-roxo.jpg" alt="Imagem de um olho roxo">
+                <figcaption class="text-slides">"Eu escorreguei e bati o <br>rosto, sou uma desastrada mesmo."</figcaption>
             </figure>
         </div>
 
-        <div class="image-text right">
+        <div class="slides">
             <figure>
-                <img id="sil" src="https://i.ibb.co/WWBdVfB/silencio1.jpg" alt="Imagem de silêncio">
-                <figcaption id="f4">"Não fala nada pra ninguém, por favor. <br>Ele vai mudar."</figcaption>
+                <img src="https://i.ibb.co/WWBdVfB/silencio1.jpg" alt="Imagem de silêncio">
+                <figcaption class="text-slides">"Não fala nada pra ninguém, por favor. <br>Ele vai mudar."</figcaption>
             </figure>
         </div>
 
-        <div class="image-text left">
+        <div class="slides">
             <figure>
-                <img id="vil" src="https://i.ibb.co/HdBjLfk/violence-against-women-4209778-1920.jpg" alt="Imagem de violência">
-                <figcaption id="f5">"Eu provoque ele, foi minha culpa."</figcaption>
+                <img src="https://i.ibb.co/HdBjLfk/violence-against-women-4209778-1920.jpg" alt="Imagem de violência">
+                <figcaption class="text-slides">"Eu provoquei ele, também. É minha culpa".</figcaption>
             </figure>
+            
+            <script>
+        let slideIndex = 0; // Índice do slide atual
+        showSlides(); // Chama a função para mostrar os slides
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active"); // Remove a classe "active" de todas as imagens
+            }
+            slideIndex++; // Incrementa o índice do slide
+            if (slideIndex > slides.length) { slideIndex = 1 } // Reseta o índice se ultrapassar o número de slides
+            slides[slideIndex - 1].classList.add("active"); // Adiciona a classe "active" ao slide atual
+            setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
+        }
+    </script>
         </div>
     </div>
-    
-    <!--Seção da Entrevista-->
+  </div>
+  
+   <!--Seção da Entrevista-->
+  <section id="entrevista">
+  <div class="container">
     <div class="interview">
-      <section id="entrevista"></section>
       <h1 class="introducao">"Infelizmente essa é mais uma desculpa, causada pelo medo, que muitas mulheres conta nos dias de hoje, para esconder 
       as marcas causadas pela violencia domesticas."</h1>
       <h2 class="Tema">Acompanhe os relatos e depoimentos citados a baixo.</h2>
-      <p class="text">
+      <p>
         Aqui vai ser posto o texto da entrevista.
       </p>
         <!-- Incorporando o áudio da entrevista -->
         <h4>Ouça a entrevista:</h4>
-        <audio controls>
+        <audio controls="">
             <source src="entrevista.mp3" type="audio/mpeg">
             Seu navegador não suporta o elemento de áudio.
         </audio>
 
         <!-- Incorporando o vídeo da entrevista -->
         <h4>Assista uma reportagem transmitida dia 15/11/2024:</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5LiMfcLcLjA?si=q5o0ssvhlk86LLSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Seu navegador não suporta o elemento de vídeo.
-        </video>
+        
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LiMfcLcLjA?si=q5o0ssvhlk86LLSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<br> <b>Reportagem passada no cidade alerta, pelo apresentador Nader Khalil.</b>
+      </section>
     </div>
- 
-    <!--Essa é a seção COMENTARIOS-->
-    <section id="comentarios"></section>   
- <div class="comentarios">
-    <h3>Deixe seu comentário:</h3>
-    <form id="comentarioForm">
-        <textarea id="campoComentario" rows="4" placeholder="Digite seu comentário aqui..." required></textarea>
-        <br>
-        <input type="submit" value="Enviar Comentário">
-    </form>
-</div>
+  </div>
+  
+    <!--Historia de Joana-->
+    <div class="history">
+      
+            <p>Uma mulher, por nome "Joana", sai de casa pelo domingo de manhã. Resolvi ir à feira da cidade onde mora. Chegando na feira. 
+        Joana compra algumas verduras, legumes e frutas. Volta para casa contente, alegre e feliz. Ao chegar na porta da casa, ouve um
+        grito. Era "Greber" o marido dela. Possesso de ciúmes, eles começam uma discussão. Greber vai para cima de Joana, jogando as 
+        compras que está com Joana ao chão. Pega Joana pelo cabelo e a puxa para dentro de casa. Fechando a porta, agora Greber ataca 
+        Joana, deixando-a com o rosto machucado, suas pernas e seus braços roxos.</p>
+            <p>Só que dessa vez, Joana tenta se defender, o que deixa Greber mais revoltado. Ela, na tentativa de se defender, o machuca com
+        suas unhas. Isso faz com que Greber agora começa a sufocar Joana, a matando com as próprias mãos.</p>
+            <p></p>Não foi a primeira vez em que Joana levou uma surra do marido. Todas às vezes que encontravam Joana machucada, ela sempre 
+        inventava uma desculpa. Dizendo que não foi nada. Que caiu. Que ele nunca fez isso, era a primeira e que ele tinha prometido
+        não fazer mais.<p></p>
+           <p></p> E quantas Joanas têm existido? Que tem se escondido pelo medo e pavor de apanhar, ou até mesmo pelas humilhações com palavras 
+        que tem ouvido? <p></p>
+      
+      <ul class="list-nao">
+            <li>Diga Não à impunidade</li>
+            <li>Diga Não à violencia contra mulheres</li>
+            <li>Diga Não. Não aceite que levante a voz contra vocês.</li>
+            <li>Não aceite violencia verbal</li>
+            <li>Diga Não isso tem que parar</li>
+      </ul>
+    </div>
+  
+   <!--Tipos de Violência-->
+   <section id="tipo-violencia"></section>
+   <div class="container">
+     <div class="tipos">
+      <h1 id="tip">TIPOS DE VIOLÊNCIA</h1>
+      <p id="txt-1">
+        "Estão previstos cinco tipos de violência doméstica e familiar contra a mulher na Lei Maria da Penha: "
+        <b> física, psicológica, moral, sexual e patrimonial</b>
+        "Capítulo II, art. 7º, incisos I, II, III, IV e V"
+      </p>
+    </div>
+      <div class="list-violenc">
+        <div class="container">
+          <div class="content">
+            
+            <div class="text">
+              <h2>VIOLÊNCIA FÍSICA</h2>
+              <p>"Qualquer conduta que ofenda a integridade ou saúde corporal da mulher." </p>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Espancamento</li>
+                <li>Atirar objetos, Sacudir e Apertar os braços</li>
+                <li>Estrangulamento ou Sufocamento</li>
+                <li>Lesões com objetos cortantes ou perfurantes</li>
+                <li>Ferimentos Causados por Queimadura ou armas de fogo</li>
+                <li>Tortura</li>
+              </ul>
+            </div>
+            
+            <div class="text">
+              <h2>VIOLÊNCIA PSICOLÓGICA</h2>
+              <p>"Qualquer conduta que cause danos emocional e diminuição da autoestima." </p>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Ameaças</li>
+                <li>Constrangimento</li>
+                <li>Humilhação</li>
+                <li>Manipulação</li>
+                <li>Isolamento (Proibir de estudar e viajar ou falar com amigos ou familiares)</li>
+                <li>Vigilancia constante</li>
+                <li>Perseguição contumaz</li>
+                <li>Insultos</li>
+                <li>Chantagem</li>
+                <li>Exploração</li>
+                <li>Limitação do direito de ir e vir</li>
+              </ul>
+            </div>
 
+            
+            <div class="text">
+              <h2>VIOLÊNCIA SEXUAL</h2>
+              <p>"Qualquer conduta que constranja a presenciar, a manter ou participar de relação sexual não desejada 
+              mediante intimidação, ameaça, coação ou uso da força." </p>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Estrupo</li>
+                <li>Obriga a mulher a fazer atos sexuais que causam desconforto ou repulsa</li>
+                <li>Impedir o uso de métodos contraceptivos ou forçar a mulher a abortar.</li>
+                <li>Forçar matrimônio, gravidez ou prostituição por meio de coação, chantagem, suborno ou manipulação.</li>
+                </li><li>Limitar ou anular o exercício dos direitos sexuais reprodutivos da mulher.</li>
+              </ul>
+            </div>
+            
+            <div class="text">
+              <h2>VIOLÊNCIA PATRIMONIAL</h2>
+              <p>"Qualquer conduta que configure retenção, subtração, destruição parcial ou total de seus objetos, instrumentos
+              trabalho, documentos pessoais, bens, valores e direitos ou recursos econômicos." </p>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Controlar o dinheiro</li>
+                <li>Deixar de pagar pensão alimentícia</li>
+                <li>Destruição de documentos pessoais</li>
+                <li>Furto, extorsão ou dano</li>
+                <li>Estelionato</li>
+                <li>Privar de bens, valores ou recursos econômicos</li>
+                <li>Causar danos propositais a objetos da mulher ou dos quais ela goste</li>
+              </ul>
+            </div>
+            
+            <div class="text">
+              <h2>VIOLÊNCIA MORAL</h2>
+              <p>"Qualquer conduta que configure calúnia, difamação ou injúria." </p>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Acusar a mulher de traição</li>
+                <li>Emitir juízos morais sobre a conduta</li>
+                <li>Fazer críticas mentirosas</li>
+                <li>Expor a vida íntima</li>
+                <li>Rebaixar a mulher por meio de xingamentos que incidem sobre a sua indole</li>
+                <li>Desvalorizar a vítima pelo seu modo de se vestir</li>
+              </ul>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  <footer>
+    <div class="container-rodape">
+      <div class="central">
+    <img src="https://www.institutomariadapenha.org.br/assets/ligue-180.png" alt="Ligue 180" id="lig"/>
+    <p id="text">
+      Esse número é da Central de Atendimento à mulheres, é um serviço que faz parte da rede nacional de 
+      enfrentamento à violência contra a mulher. Nesta central eles oferecerão três tipos de
+      atendimento: informaões sobre leis e campanhas, orientações para vítimas de vioência e regisro de denúnicas.
+    </p>  
+    <p>
+      <b>Diga Não a violencia contra mulheres. Denuncie!</b>
+    </p>
+    </div>
+    </div>
+    <!---------------Final de tipos de Violência------------->
     
-<h3>Comentários:</h3>
-<div class="lista-comentarios" id="listaComentarios"></div>
-
-<script>
-    const comentarioForm = document.getElementById('comentarioForm');
-    const campoComentario = document.getElementById('campoComentario');
-    const listaComentarios = document.getElementById('listaComentarios');
-
-    // Carregar comentários do localStorage ao carregar a página
-    document.addEventListener('DOMContentLoaded', carregarComentarios);
-
-    // Função para carregar comentários do localStorage
-    function carregarComentarios() {
-        const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
-        comentarios.forEach(comentario => {
-            adicionarComentarioNaTela(comentario);
-        });
-    }
-
-    // Função para adicionar um comentário na tela
-    function adicionarComentarioNaTela(comentario) {
-        const divComentario = document.createElement('div');
-        divComentario.className = 'comentario';
-        divComentario.textContent = comentario;
-        listaComentarios.appendChild(divComentario);
-    }
-
-    // Evento de envio do formulário
-    comentarioForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-
-        const comentario = campoComentario.value;
-
-        // Adicionar comentário ao localStorage
-        const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
-        comentarios.push(comentario);
-        localStorage.setItem('comentarios', JSON.stringify(comentarios));
-
-        // Adicionar comentário na tela
-        adicionarComentarioNaTela(comentario);
-
-        // Limpar o campo de texto
-        campoComentario.value = '';
-    });
-    
+    <footer>
+        <p>&copy; 2024 Respeito Para Elas. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
