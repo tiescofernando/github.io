@@ -1,99 +1,230 @@
-body {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(137deg, rgba(226, 71, 179, 0.94) 15%, rgba(173, 87, 13, 1) 35%, rgba(197, 46, 65, 1) 100%);
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white; /* Para garantir que o texto seja legível sobre o fundo escuro */
+:root{
+  --font-tema: 36px; 
+  --font01:"Cooper Hewitt", "Helvitica Neue", "Arial", "Sans-serif"; 
+  --font02: font-weight: 700px; 
+  --font03: uppercase;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo da barra de navegação */
+* {
+  max-width: 1000px;
+}
+
+html, body{
+    width: 95%;
+    height: 100vh;
     padding: 10px;
-    text-align: center;
+    margin: 50px;
 }
 
-nav ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0;
+body{
+  font: Arial, Sans-serif;
 }
 
-nav ul li {
-    display: inline; /* Exibe os itens da lista em linha */
-    margin: 0 150px; /* Espaçamento entre os itens */
+header img{
+    width: 123px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 15px;
 }
 
-nav ul li a {
-    color: white; /* Cor do texto do link */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 18px; /* Tamanho da fonte */
+#txt{
+  font-size: var(--font-tema);
+  font-family: var(--font01);
+  font-weight: var(--font02);
+  text-transform: var(--font03);
+  color: black;
+  position: relative;
+  left: 105px;
+  margin: 10px;
 }
 
-.content {
-    display: flex;
-    flex-direction: column; /* Coloca os itens em coluna */
+header li{
+  list-style: none;
+  display: inline-block;
+  gap: 15px;
+  letter-spacing: 1px;
+  
 }
 
-.image-text {
-    display: flex;
-    align-items: center; /* Alinha verticalmente o conteúdo */
-    margin: 10px 0; /* Espaçamento entre os conjuntos de imagem e texto */
+header a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #d7b221;
+  text-transform: uppercase;
+  font-family: "Archivo Narrow",sans-serif;
+  display: relative;
+  padding: 10px 20px 0 30px;  
 }
 
-.image-text.left {
-    flex-direction: row;/*Texto à direita, imagem à esquerda*/
+header a:hover{
+  color: #999;
 }
 
-.image-text.right {
-    flex-direction: row-reverse; /* Texto à esquerda, imagem à direita */
+.slidesshow-content{
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
 }
 
-.image-text img {
-    width: 250px; /* Tamanho fixo para as imagens */
-    height: 250px; /* Tamanho fixo para as imagens */
-    border-radius: 20px; /* Bordas arredondadas */
-    margin: 4px; /* Espaçamento entre a imagem e o texto */
+.slides {
+  display: none; /* Esconde todas as imagens por padrão */
+  position: absolute; /* Posiciona as imagens uma em cima da outra */
+  width: 100%; /* Largura total do contêiner */
+  height: auto; /* Mantém a proporção da imagem */ 
+  
 }
 
-.image-text img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+img {
+  width: 400px; /* Faz com que a imagem se ajuste ao tamanho do contêiner */
+  height: 300px; /* Mantém a proporção da imagem */
+  height: auto;
+  border-radius: 10px;
 }
 
-.image-text figcaption {
-    opacity: 0.8; /* Opacidade inicial do texto */
-    transition: opacity 0.9s ease; /* Transição suave para a opacidade */
-    position: relative;
-    font-size: 35px; /* Aumenta o tamanho da fonte */
-    margin-left: 25px; /* Espaçamento entre a imagem e o texto */
+.active {
+  display: block; /* Mostra a imagem ativa */
+}
+
+.text-slides{
+    font-family: Times, Optima, Verdana, sans-serif	;
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    color: white; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.list-nao{
+    font-weight: bold;
+    list-style: none;
+    margin: 0 62px;
+}
+
+#tip{
+  text-align: center;
+}
+
+
+.container-rodape{
+  font-size: 14px;
+  display: relative;
+  padding: 25px;
+  margin: 15px;
+}
+
+.container-rodape img{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+  
+footer{
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+    * {
+        max-width: 100%; /* Ajusta a largura máxima de todos os elementos para 100% */
+    }
+
+    html, body {
+        width: 90%; /* Define a largura do body para 100% */
+        padding: 5px; /* Reduz o padding */
+        margin: 20px; /* Reduz a margem */
+    }
+
+    header img {
+        width: 100px; /* Reduz a largura da imagem do cabeçalho */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 10px; /* Ajusta a margem */
+    }
+
+    #txt {
+        font-size: 16px; /* Diminui o tamanho da fonte */
+        left: 50px; /* Ajusta a posição do texto */
+        margin: 5px; /* Reduz a margem */
+    }
+
+    header li {
+        display: block; /* Altera para exibição em bloco para empilhar os itens */
+        margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    }
+
+    header a {
+        padding: 5px 5px; /* Ajusta o preenchimento dos links */
+        font-size: 10px;
+      
+    }
     
+.slidesshow-content{
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
 }
 
-.image-text img:hover + figcaption {
-    opacity: 15; /* Aumenta a opacidade do texto ao passar o mouse na imagem */
+.slides {
+  display: block; /* Esconde todas as imagens por padrão */
+  position: absolute; /* Posiciona as imagens uma em cima da outra */
+  width: 100%; /* Largura total do contêiner */
+  height: auto; /* Mantém a proporção da imagem */ 
+  
 }
 
-.interview {
-  border: 2px solid #eead2d;
-  border-radius: 15px;
-  padding: 3px;
-  margin: 20px;
-  box-shadow: 0 3px rgba(0, 0, 0, 1);
+img {
+  width: 300px; /* Faz com que a imagem se ajuste ao tamanho do contêiner */
+  height: 250px; /* Mantém a proporção da imagem */
+  height: auto;
+  border-radius: 10px;
 }
 
-#f1, #f2, #f3, #f4 {
-    font-size: 25px;
-    font-family: monospace, cursive;
-    position: relative;
-    display: inline-block;
-    padding: 20px;
+.active {
+  display: absolute; /* Mostra a imagem ativa */
 }
 
- #f5 {
-    font-size: 42px;
-    font-family: monospace, cursive;
-    position: relative;
-    display: inline-block;
-    padding: 20px;
+.text-slides{
+    font-family: Times, Optima, Verdana, sans-serif	;
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    color: white; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+    .container-rodape {
+        font-size: 12px; /* Diminui o tamanho da fonte do rodapé */
+        padding: 15px; /* Reduz o preenchimento */
+    }
+    
+    iframe{
+      width: 350px;
+      height: 200px;
+    }
+}
 
 
 
